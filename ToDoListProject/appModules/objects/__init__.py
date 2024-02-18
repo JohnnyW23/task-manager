@@ -4,8 +4,12 @@ def readInt(msg):
             n = int(input(msg))
             return n
         
-        except (ValueError, TypeError, KeyboardInterrupt):
+        except (ValueError, TypeError):
             print('\033[31mERROR! Please, type a valid INTEGER number.\033[m')
+
+        except KeyboardInterrupt:
+            print()
+            return 8
 
 
 def lin(len=30):
