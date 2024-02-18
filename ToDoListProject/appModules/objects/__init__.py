@@ -4,12 +4,8 @@ def readInt(msg):
             n = int(input(msg))
             return n
         
-        except (ValueError, TypeError):
+        except (ValueError, TypeError, KeyboardInterrupt):
             print('\033[31mERROR! Please, type a valid INTEGER number.\033[m')
-            
-        except KeyboardInterrupt:
-            print('\n\033[31mUser preferred to not type any number.\033[m')
-            break
 
 
 def lin(len=30):
@@ -43,7 +39,7 @@ def taskValid(length=60):
     while True:
         task = input('Type a task to be registered:\n')
         if len(task) > length:
-            print('\033[31mYour entry must have a max limit of 50 characters!\033[m')
+            print(f'\033[31mYour entry must have a max limit of {length} characters!\033[m')
         else:
             return task
 
@@ -62,8 +58,8 @@ Created by: \033[36mDavi Nascimento\033[m
     
     sleep(0.5)
 
-    print('''->  The user must choose an option from the menu to
-    execute one of the commands below.
+    print('''->  The user must choose an option from the menu
+    to execute one of the commands below.
 ''')
 
     sleep(0.5)
