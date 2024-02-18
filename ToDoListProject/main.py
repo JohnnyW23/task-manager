@@ -74,6 +74,7 @@ try:
                 break
 
             else:
+                print(f'\033[31mThere is no {option} in the menu list!\033[m')
                 option = readInt('\033[32mOption:\033[m ')
 
     exit(50, 33)
