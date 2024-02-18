@@ -1,4 +1,4 @@
-# task-manager
+# ToDoListProject
 Python project of a simple personal task manager.
 
 # Usage
